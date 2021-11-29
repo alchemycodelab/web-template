@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 
-// initialize state
+// let state
 
 // set event listeners 
   // get user input
