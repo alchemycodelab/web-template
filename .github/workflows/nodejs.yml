@@ -3,28 +3,20 @@
 
 name: Node.js CI
 
-on:
-  push:
-    branches: [ master, main ]
-  pull_request:
-    branches: [ master, main ]
+on: [push, pull_request]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 18.x
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm i eslint esm jsdom
+        node-version: 18.x
+    - run: npm i esm jsdom
     - run: npx eslint .
     - run: npx qunit test/index.js
       env:
