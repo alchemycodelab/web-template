@@ -23,13 +23,3 @@ header {
 main {
     padding: 20px;
 }
-
-footer {
-    position: sticky;
-    bottom: 0;
-    padding: 7px 20px;
-    font-size: .8em;
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--footer-background);
-}
