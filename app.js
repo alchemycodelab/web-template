@@ -3,7 +3,6 @@
 /* State */
 
 /* Actions */
-
 function loadPage() {}
 
 /* Components */
