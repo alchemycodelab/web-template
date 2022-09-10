@@ -1,14 +1,17 @@
-/* imports */
+/* Imports */
 
-/* state */
+/* State */
 
-/* actions */
+/* Actions */
 
-/* components */
+function loadPage() {}
 
-/* component */
+/* Components */
+
+/* Component */
 // get DOM
 // display
 // event listeners
 
-/* call pageLoad() */
+/* Run page load code */
+loadPage();
