@@ -1,12 +1,12 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
+    --header-background: rgb(254, 251, 245);
+    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
+        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 body {
-    height: 100vh;
-    font-family: 'Rubik', san-serif;
+    font-family: var(--primary-font);
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -18,6 +18,7 @@ header {
     display: flex;
     align-items: center;
     background-color: var(--header-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 main {
