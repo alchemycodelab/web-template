@@ -3,7 +3,7 @@
 /* State */
 
 /* Actions */
-function loadPage() {}
+function load() {}
 
 /* Components */
 
@@ -13,4 +13,4 @@ function loadPage() {}
 // event listeners
 
 /* Run page load code */
-loadPage();
+load();
