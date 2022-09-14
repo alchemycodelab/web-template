@@ -1,16 +1,11 @@
 /* Imports */
 
+/* Get DOM Elements */
+
 /* State */
 
-/* Actions */
-function load() {}
+/* Events */
 
-/* Components */
+/* Display Functions */
 
-/* Component */
-// get DOM
-// display
-// event listeners
-
-/* Run page load code */
-load();
+// (don't forget to call any display functions you want to run on page load!)
