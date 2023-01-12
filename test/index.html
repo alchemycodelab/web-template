@@ -11,39 +11,29 @@
 <body>
   <div id="qunit"></div>
   <div id="qunit-fixture"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.6/beautify-html.js"></script>
   <script src="https://code.jquery.com/qunit/qunit-2.9.1.js"></script>
-  <script>
-    const toString = (input) => {
-      if (typeof input === 'string') return input;
-      if (input instanceof Node) return input.outerHTML;
-      throw new Error(`Input must be string or DOM Node`);
-    };
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="./utils/confetti-maker.js"></script>
 
-    QUnit.assert.htmlEqual = function htmlEqual(actual, expected) {
-      const htmlActual = html_beautify('\n' + toString(actual));
-      const htmlExpected = html_beautify('\n' + toString(expected));
-      return QUnit.assert.equal(htmlActual, htmlExpected);
-    };
-  </script>
   <script>
+
     function storageMock() {
       var storage = {};
 
       return {
-        setItem: function(key, value) {
+        setItem: function (key, value) {
           storage[key] = value || '';
         },
-        getItem: function(key) {
+        getItem: function (key) {
           return key in storage ? storage[key] : null;
         },
-        removeItem: function(key) {
+        removeItem: function (key) {
           delete storage[key];
         },
         get length() {
           return Object.keys(storage).length;
         },
-        key: function(i) {
+        key: function (i) {
           var keys = Object.keys(storage);
           return keys[i] || null;
         }
