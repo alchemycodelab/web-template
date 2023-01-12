@@ -17,6 +17,17 @@
   <script src="./utils/confetti-maker.js"></script>
 
   <script>
+    const toString = (input) => {
+      if (typeof input === 'string') return input;
+      if (input instanceof Node) return input.outerHTML;
+      throw new Error(`Input must be string or DOM Node`);
+    };
+
+    QUnit.assert.htmlEqual = function htmlEqual(actual, expected) {
+      const htmlActual = html_beautify('\n' + toString(actual));
+      const htmlExpected = html_beautify('\n' + toString(expected));
+      return QUnit.assert.equal(htmlActual, htmlExpected);
+    };
 
     function storageMock() {
       var storage = {};
